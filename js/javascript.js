@@ -41,9 +41,27 @@ var students = [
 loadStudents();
 
 function loadStudents(){
-    for (student of students){
+    for (let student of students){
         addNewRow(student);
     }
+}
+
+function save(){
+
+    var student = {
+        id: students.length + 1,
+        name: document.getElementById("inputName").value,
+        email: document.getElementById("inputEmail").value,
+        phone: document.getElementById("inputPhone").value,
+        course: document.getElementById("selectCourse").value,
+        period: document.querySelector('input[name="exampleRadios"]:checked').value  
+    };
+       
+    students.push(student); 
+    
+    addNewRow(student);
+
+    document.getElementById("formStudent").reset();
 }
 
 function addNewRow(student){
