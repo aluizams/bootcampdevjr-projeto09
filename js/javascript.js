@@ -54,7 +54,7 @@ function save(){
         email: document.getElementById("inputEmail").value,
         phone: document.getElementById("inputPhone").value,
         course: document.getElementById("selectCourse").value,
-        period: document.querySelector('input[name="exampleRadios"]:checked').value  
+        period: document.querySelector('input[name="Radios"]:checked').value  
     };
        
     students.push(student); 
@@ -75,18 +75,28 @@ function addNewRow(student){
     newRow.insertCell().appendChild(nameNode);
 
     var emailNode = document.createTextNode(student.email);
-    newRow.insertCell().appendChild(emailNode);
+    var cell = newRow.insertCell();
+    cell.className = 'd-none d-sm-table-cell';
+    cell.appendChild(emailNode);
 
     var formattedPhone = formatPhoneNumber(student.phone);
 
     var phoneNode = document.createTextNode(formattedPhone);
-    newRow.insertCell().appendChild(phoneNode);
+    
+    var cell = newRow.insertCell();
+    cell.className = 'd-none d-md-table-cell';
+    cell.appendChild(phoneNode);
 
     var courseNode = document.createTextNode(courses[student.course-1].name);
-    newRow.insertCell().appendChild(courseNode);
+    
+    var cell = newRow.insertCell();
+    cell.className = 'd-none d-md-table-cell';
+    cell.appendChild(courseNode);
 
     var periodNode = document.createTextNode(periods[student.period-1].name);
-    newRow.insertCell().appendChild(periodNode);
-
+   
+    var cell = newRow.insertCell();
+    cell.className = 'd-none d-md-table-cell';
+    cell.appendChild(periodNode);
         
     }
