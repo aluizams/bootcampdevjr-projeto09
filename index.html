@@ -27,10 +27,15 @@
                     </div>
                     <div class="row mb-3 mt-3">
                         <label for="inputEmail" class="col-sm-2 col-form-label">Email:</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-4">
                             <input type="text" class="form-control" id="inputEmail" required>
-                        </div>
-                    
+                        </div>  
+                                <label for="inputPhone" class="col-sm-2 col-form-label">Telefone:</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="inputPhone" required>
+                                </div>
+                    </div>
+
                         <div class="row mb-3 mt-3">
                             <label for="selectCourse" class="col-sm-2 col-form-label">Curso:</label>
                             <div class="col-sm-5">
@@ -43,26 +48,26 @@
                                 </select>
                             </div>
                         </div>
-                    </div>
+                    
 
                     <div class="row mb-3 mt-3">
                         <label class="col-sm-2 col-form-label">Turno:</label>
-                        <div class="col-sm-5">
+                        <div class="col-sm-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                <label class="form-check-label" for="exampleRadios1">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="matutino" value="1" checked>
+                                <label class="form-check-label" for="matutino">
                                   Manhã
                                 </label>
                               </div>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="exampleRadios2">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="vespertino" value="2">
+                                <label class="form-check-label" for="vespertino">
                                   Tarde
                                 </label>
                               </div>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                                <label class="form-check-label" for="exampleRadios3">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="noturno" value="3">
+                                <label class="form-check-label" for="noturno">
                                   Noite
                                 </label>
                               </div>
@@ -86,7 +91,7 @@
             </div>
             <div class="row">
                 <div class="col-md-10 offset-md-1">
-                    <table class="table" id="productsTable">
+                    <table class="table" id="studentsTable">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -98,7 +103,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
+
                         </tbody>
                     </table>
 
